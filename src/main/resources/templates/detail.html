@@ -34,6 +34,14 @@
     <nav>
         <a href="/">◂ zpět na seznam</a>
     </nav>
+    <div>
+        <form class="row g-3" th:action="@{/detail}" method="post">
+            <input type="hidden" name="id" th:value="${#httpServletRequest.getParameter('id')}">
+            <div class="col-md-1 align-self-end">
+                <button type="submit" class="btn btn-primary">Smazat</button>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>

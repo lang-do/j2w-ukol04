@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nová vizitka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class = "nova">
+    <h2 class="mt-5 mb-3">Přidat vizitku</h2>
+    <form class="row g-3" th:action="@{/nova}" method="post">
+        <div>
+            <label for="jmenoName" class="form-label">Jméno</label>
+            <input id="jmenoName" name="jmeno" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="firmaName" class="form-label">Firma</label>
+            <input id="firmaName" name="firma" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="uliceName" class="form-label">Ulice</label>
+            <input id="uliceName" name="ulice" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="obecPscName" class="form-label">Obec a PSČ</label>
+            <input id="obecPscName" name="obecPsc" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="emailPscName" class="form-label">Email</label>
+            <input id="emailPscName" name="email" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="telefonName" class="form-label">Telefonní číslo</label>
+            <input id="telefonName" name="telefon" class="form-control" type="text" required/>
+        </div>
+        <div>
+            <label for="webName" class="form-label">Název webu</label>
+            <input id="webName" name="web" class="form-control" type="text" required/>
+        </div>
+
+        <div class="col-md-1 align-self-end">
+            <button type="submit" class="btn btn-primary">Přidat</button>
+        </div>
+    </form>
+    <nav>
+        <a href="/">◂ zpět na seznam</a>
+    </nav>
+</div>
+</body>
+</html>
